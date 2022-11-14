@@ -25,7 +25,7 @@ def feature_cmd_func(a, msg):
                    disable_web_page_preview=True)
 
 
-@bot.on_message(filters.command('api'))
+@bot.on_message(filters.command(['link','api']))
 def add_api_cmd(a, msg):
     API = filter_api(msg)
     if API == False:
@@ -99,5 +99,5 @@ def text_msgs(a, m):
 
     msg.edit_text(f'{text}', disable_web_page_preview=True)
 
-
+print('APP HAS STARTED SUCCESFULLY')
 bot.run()
