@@ -6,10 +6,10 @@ from botbtns import *
 API_ID = 16514976
 API_HASH = '40bd8634b3836468bb2fb7eafe39d81a'
 
-TOKEN = '5696074673:AAFjMo1nelLLuqWtB-G5uYHT64D0ZK-V2iY'
+BOT_TOKEN = os.environ.get('BOT_TOKEN')
 
 bot = Client("Url-Short-Bot", api_id=API_ID,
-             api_hash=API_HASH, bot_token=TOKEN, workers=2)
+             api_hash=API_HASH, bot_token=BOT_TOKEN, workers=2)
 
 
 @bot.on_callback_query(filters.regex('about_data'))
